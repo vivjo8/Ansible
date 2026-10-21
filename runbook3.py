@@ -6,7 +6,7 @@ from nornir.core.exceptions import NornirExecutionError
 
 nr = InitNornir(config_file="config.yaml")
 
-cmd_list = ["show ip int brief", "show ver", "show clock"]
+cmd_list = ["show ip int brief", "show ver", "show clock", "show cdp neighbors"]
 def show_command_test(task):
     for cmd in cmd_list:
         response = task.run(task=send_command, command= cmd)
