@@ -6,11 +6,11 @@ from nornir.core.exceptions import NornirExecutionError
 
 nr = InitNornir(config_file="config.yaml")
 
-cmd_list = ["show ip int brief", "show version", "show clock"]
+cmd_list = ["show ip int brief", "show ver", "show clock"]
 def show_command_test(task):
     for cmd in cmd_list:
         response = task.run(task=send_command, command= cmd)
-        task.run(task=write_file, content= response.result, filename = "interface.txt")
+        task.run(task=write_file, content= response.result, filename = f"{task.host}.txt",append=True)
 
 results = nr.run(task=show_command_test)
 
