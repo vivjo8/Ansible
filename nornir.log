@@ -1,0 +1,582 @@
+2026-10-11 19:14:15,970 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 2 hosts
+2026-10-11 19:15:38,772 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 2 hosts
+2026-10-11 19:19:26,832 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 2 hosts
+2026-10-13 16:06:48,086 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 2 hosts
+2026-10-14 13:06:48,250 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 13:10:03,800 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 13:10:04,823 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 9, in backup_test
+    task.host["facts"] = response["running"]
+                         ~~~~~~~~^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+
+2026-10-14 13:11:08,692 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 13:11:09,729 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 10, in backup_test
+    running_config = task.host["facts"]["running"]
+                     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'running'
+
+2026-10-14 13:12:21,469 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 13:12:22,450 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 9, in backup_test
+    task.host["facts"] = response["config"]["running"]
+                         ~~~~~~~~^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+
+2026-10-14 13:12:54,927 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 13:12:55,941 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 9, in backup_test
+    task.host["facts"] = response.result["running"]
+                         ~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'running'
+
+2026-10-14 13:13:13,647 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 13:14:29,173 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 13:15:41,168 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 13:16:14,138 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 13:16:15,119 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 12, in backup_test
+    with open(f"{task.host}-{datetime.date()}-backup_config.txt", "a") as f:
+                             ^^^^^^^^^^^^^^^
+TypeError: function missing required argument 'year' (pos 1)
+
+2026-10-14 13:16:55,343 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 14:11:56,299 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 14:12:17,568 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 14:23:54,962 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 14:24:27,205 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 2 hosts
+2026-10-14 14:32:41,177 -  nornir.core -     INFO -        run() - Running task 'enable_archive' with args {} on 2 hosts
+2026-10-14 14:32:41,179 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_commands_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands_from_file() got an unexpected keyword argument 'filename'
+
+2026-10-14 14:32:41,180 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'enable_archive' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/archive.py", line 8, in enable_archive
+    task.run(task=send_commands_from_file, filename = "./commands_archive.txt")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2026-10-14 14:32:41,180 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_commands_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: send_commands_from_file() got an unexpected keyword argument 'filename'
+
+2026-10-14 14:32:41,181 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'enable_archive' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/archive.py", line 8, in enable_archive
+    task.run(task=send_commands_from_file, filename = "./commands_archive.txt")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2026-10-14 14:34:38,783 -  nornir.core -     INFO -        run() - Running task 'enable_archive' with args {} on 2 hosts
+2026-10-14 14:34:39,472 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'enable_archive' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/archive.py", line 8, in enable_archive
+    task.run(task=send_commands_from_file, file="./commands_archive.txt")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2026-10-14 14:34:39,474 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'enable_archive' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/archive.py", line 8, in enable_archive
+    task.run(task=send_commands_from_file, file="./commands_archive.txt")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2026-10-14 14:35:16,729 -  nornir.core -     INFO -        run() - Running task 'enable_archive' with args {} on 2 hosts
+2026-10-14 14:35:17,324 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'enable_archive' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/archive.py", line 8, in enable_archive
+    task.run(task=send_commands_from_file, file="commands_archive.txt")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2026-10-14 14:35:17,399 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'enable_archive' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/archive.py", line 8, in enable_archive
+    task.run(task=send_commands_from_file, file="commands_archive.txt")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_commands_from_file (failed)
+
+
+2026-10-14 14:36:02,948 -  nornir.core -     INFO -        run() - Running task 'enable_archive' with args {} on 2 hosts
+2026-10-14 14:36:02,951 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'enable_archive' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/archive.py", line 8, in enable_archive
+    task.run(task=send_commands_from_file, file="./commands_archive.txt")
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'send_commands_from_file' is not defined. Did you mean: 'send_configs_from_file'?
+
+2026-10-14 14:36:02,952 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'enable_archive' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/archive.py", line 8, in enable_archive
+    task.run(task=send_commands_from_file, file="./commands_archive.txt")
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'send_commands_from_file' is not defined. Did you mean: 'send_configs_from_file'?
+
+2026-10-14 14:36:16,574 -  nornir.core -     INFO -        run() - Running task 'enable_archive' with args {} on 2 hosts
+2026-10-14 15:23:31,304 -  nornir.core -     INFO -        run() - Running task 'replace' with args {} on 1 hosts
+2026-10-14 15:26:27,190 -  nornir.core -     INFO -        run() - Running task 'replace' with args {} on 1 hosts
+2026-10-14 15:26:59,654 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 15:28:59,733 -  nornir.core -     INFO -        run() - Running task 'replace' with args {} on 1 hosts
+2026-10-14 15:29:02,325 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 299, in load_replace_candidate
+    return_status, msg = self._load_candidate_wrapper(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 282, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+                           ^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 718, in _scp_file
+    return self._xfer_file(
+           ^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 786, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2026-10-14 15:29:02,327 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'replace' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/config_replace.py", line 8, in replace
+    task.run(task=napalm_configure, filename= f"./backup-directory/{task.host}.txt", replace=True)
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2026-10-14 15:29:45,015 -  nornir.core -     INFO -        run() - Running task 'replace' with args {} on 1 hosts
+2026-10-14 15:29:47,361 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 299, in load_replace_candidate
+    return_status, msg = self._load_candidate_wrapper(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 282, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+                           ^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 718, in _scp_file
+    return self._xfer_file(
+           ^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 786, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2026-10-14 15:29:47,363 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'replace' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/config_replace.py", line 8, in replace
+    task.run(task=napalm_configure, filename= f"./backup-directory/{task.host}.txt", replace=True)
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2026-10-14 15:30:35,366 -  nornir.core -     INFO -        run() - Running task 'enable_archive' with args {} on 1 hosts
+2026-10-14 15:30:47,464 -  nornir.core -     INFO -        run() - Running task 'replace' with args {} on 1 hosts
+2026-10-14 15:31:25,534 -  nornir.core -     INFO -        run() - Running task 'replace' with args {} on 1 hosts
+2026-10-14 15:32:01,057 -  nornir.core -     INFO -        run() - Running task 'replace' with args {} on 1 hosts
+2026-10-14 15:32:03,600 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'napalm_configure' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir_napalm/plugins/tasks/napalm_configure.py", line 34, in napalm_configure
+    device.load_replace_candidate(filename=filename, config=configuration)
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 299, in load_replace_candidate
+    return_status, msg = self._load_candidate_wrapper(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 282, in _load_candidate_wrapper
+    (return_status, msg) = self._scp_file(
+                           ^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 718, in _scp_file
+    return self._xfer_file(
+           ^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/napalm/ios/ios.py", line 786, in _xfer_file
+    raise CommandErrorException(msg)
+napalm.base.exceptions.CommandErrorException: SCP file transfers are not enabled. Configure 'ip scp server enable' on the device.
+
+2026-10-14 15:32:03,602 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'replace' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/config_replace.py", line 8, in replace
+    task.run(task=napalm_configure, filename= f"./backup-directory/{task.host}.txt", replace=True)
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_configure (failed)
+
+
+2026-10-14 15:32:07,145 -  nornir.core -     INFO -        run() - Running task 'enable_archive' with args {} on 1 hosts
+2026-10-14 15:32:12,862 -  nornir.core -     INFO -        run() - Running task 'replace' with args {} on 1 hosts
+2026-10-14 15:35:22,432 -  nornir.core -     INFO -        run() - Running task 'enable_archive' with args {} on 1 hosts
+2026-10-14 15:35:29,000 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-14 15:36:19,003 -  nornir.core -     INFO -        run() - Running task 'replace' with args {} on 1 hosts
+2026-10-16 12:06:28,576 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:29:00,765 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:44:29,098 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:47:02,059 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:48:01,992 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:49:01,935 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:50:01,952 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:50:10,465 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:51:01,905 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:52:01,870 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:53:01,878 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:54:02,788 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:55:02,824 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:56:02,774 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:57:02,734 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:58:02,747 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 12:59:02,706 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:00:03,419 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:01:02,494 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:02:02,476 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:03:02,471 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:04:02,256 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:05:02,210 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:06:02,192 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:07:02,216 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:08:02,174 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:09:02,131 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:10:02,181 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:11:02,177 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:12:02,197 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:13:02,139 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:14:02,128 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:15:02,072 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:16:02,018 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:17:01,968 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:18:01,918 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:19:01,958 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:20:02,015 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:21:01,989 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:22:02,765 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:23:01,945 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:24:01,924 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:25:01,889 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:26:01,909 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:27:01,836 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:28:02,603 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:29:02,557 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:30:04,733 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:31:03,845 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:31:04,858 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 18, in backup_test
+    pathlib.Path(date_dir).mkdir(exist_ok=False)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: 'backup-directory/2026-10-16'
+
+2026-10-16 13:32:02,927 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:32:03,952 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 18, in backup_test
+    pathlib.Path(date_dir).mkdir(exist_ok=False)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: 'backup-directory/2026-10-16'
+
+2026-10-16 13:33:02,023 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:33:03,040 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 18, in backup_test
+    pathlib.Path(date_dir).mkdir(exist_ok=False)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: 'backup-directory/2026-10-16'
+
+2026-10-16 13:34:01,986 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:34:02,960 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 18, in backup_test
+    pathlib.Path(date_dir).mkdir(exist_ok=False)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: 'backup-directory/2026-10-16'
+
+2026-10-16 13:35:02,341 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:35:03,333 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 18, in backup_test
+    pathlib.Path(date_dir).mkdir(exist_ok=False)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: 'backup-directory/2026-10-16'
+
+2026-10-16 13:36:03,101 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:36:04,079 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 18, in backup_test
+    pathlib.Path(date_dir).mkdir(exist_ok=False)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: 'backup-directory/2026-10-16'
+
+2026-10-16 13:37:02,891 -  nornir.core -     INFO -        run() - Running task 'backup_test' with args {} on 1 hosts
+2026-10-16 13:37:03,893 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'backup_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/backup.py", line 18, in backup_test
+    pathlib.Path(date_dir).mkdir(exist_ok=False)
+  File "/usr/lib/python3.12/pathlib.py", line 1313, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: 'backup-directory/2026-10-16'
+
+2026-10-19 15:01:28,600 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 15:13:12,335 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 15:14:48,275 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 15:58:44,521 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:02:08,109 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:02:55,546 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:03:26,370 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:04:28,456 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:05:07,552 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:12:18,752 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:14:46,546 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:22:14,593 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:29:42,030 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:32:07,910 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 16:33:46,583 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:51:07,190 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:51:07,653 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 8, in show_command_test
+    task.run(task=send_command, command="show i int brief")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2026-10-19 18:53:39,679 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:53:40,195 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 9, in show_command_test
+    task.run(task=send_command, command="show i int brief")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2026-10-19 18:54:15,184 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:54:15,666 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 9, in show_command_test
+    task.run(task=send_command, command="show  int brief")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2026-10-19 18:55:07,646 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:55:08,161 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 9, in show_command_test
+    task.run(task=send_command, command="show  int brief")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2026-10-19 18:55:45,940 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:55:46,481 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 9, in show_command_test
+    task.run(task=send_command, command="show  int brief")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2026-10-19 18:56:30,124 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:56:30,623 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 9, in show_command_test
+    task.run(task=send_command, command="show  int brief")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2026-10-19 18:57:16,407 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:57:16,862 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 9, in show_command_test
+    task.run(task=send_command, command="show  int brief")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2026-10-19 18:58:22,078 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:58:22,614 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 9, in show_command_test
+    task.run(task=send_command, command="show  int brief")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2026-10-19 18:59:08,806 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-19 18:59:09,313 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 9, in show_command_test
+    task.run(task=send_command, command="show  int brief")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2026-10-20 15:46:35,121 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 1 hosts
+2026-10-20 15:46:35,620 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'write_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir_utils/plugins/tasks/files/write_file.py", line 51, in write_file
+    diff = _generate_diff(filename, content, append)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir_utils/plugins/tasks/files/write_file.py", line 23, in _generate_diff
+    new_content = content.splitlines()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 262, in __getattr__
+    return getattr(self[0], name)
+           ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ScrapliResult' object has no attribute 'splitlines'
+
+2026-10-20 15:46:35,622 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'show_command_test' failed with traceback:
+Traceback (most recent call last):
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 102, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/napdev/vivek/structured-data/runbook3.py", line 11, in show_command_test
+    task.run(task=write_file, content= response, filename = "interface.txt")
+  File "/home/napdev/vivek/structured-data/lib/python3.12/site-packages/nornir/core/task.py", line 177, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: write_file (failed)
+
+

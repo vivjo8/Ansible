@@ -1,0 +1,58 @@
+---
+
+R1:
+    username: "tctsrtr1"
+    password: "Tata*2026!"
+    hostname: "100.81.104.170"
+    groups:
+        - cisco_group
+        - north
+    facts: {}
+    data:
+        ospf:
+            router_id : "1.1.1.1"
+            area : 1
+            network : "0.0.0.0 0.0.0.0"
+            process_id: "1"
+
+# R2:
+#     username: "tctsrtr2"
+#     password:  "Tata*2k26!"
+#     hostname: "100.81.104.171"
+#     groups:
+#         - cisco_group
+#         - south
+#     facts : {}
+#     data:
+#         ospf:
+#             router_id : "2.2.2.2"
+#             area : 1
+#             network : "0.0.0.0 0.0.0.0"
+#             process_id: "1"
+         
+# R3:
+#     username:  "tctsrtr3"
+#     password:  "Tata@2026!"
+#     hostname: "100.81.104.172"
+#     groups:
+#         - cisco_group
+
+# R4:
+#     username:  "tctsrtr4"
+#     password:  "Tata#2026!"
+#     hostname: "100.81.104.173"
+#     groups:
+#         - cisco_group
+# R5:
+#     username:  "tctsrtr5"
+#     password:  "Tata*2O2$!"
+#     hostname: "100.81.104.174"
+#     groups:
+#         - cisco_group
+
+# R6:
+#     username:  "tctsrtr6"
+#     password:  "Tata*2026!"
+#     hostname: "100.81.104.175"
+#     groups:
+#         - cisco_group
